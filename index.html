@@ -1,0 +1,173 @@
+
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jo'shqinbek — Modern Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg-1:#0f1724;--bg-2:#071022;--glass:rgba(255,255,255,0.05);--accent:#7c3aed;--accent-2:#06b6d4;--muted:#9aa7bd}
+    *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(135deg,var(--bg-1),var(--bg-2));color:#e6eef8;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:36px auto;padding:28px}
+
+    /* layout */
+    .grid{display:grid;grid-template-columns:360px 1fr;gap:28px;align-items:start}
+    @media(max-width:980px){.grid{grid-template-columns:1fr}}
+
+    /* left card */
+    .profile-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:16px;padding:22px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.04);box-shadow:0 12px 40px rgba(2,6,23,0.6)}
+    .avatar{width:100%;display:flex;justify-content:center;margin-bottom:14px}
+    .avatar img{width:220px;height:220px;object-fit:cover;border-radius:16px;border:6px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(124,58,237,0.12)}
+    .name{font-size:26px;font-weight:900;margin:6px 0}
+    .subtitle{color:var(--muted);font-weight:600;margin-bottom:12px}
+    .tagline{line-height:1.6;color:#d7e7f8}
+
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:700}
+
+    /* right content */
+    .main{display:flex;flex-direction:column;gap:20px}
+    .section{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+    h2{margin:0 0 10px;font-size:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--glass),rgba(255,255,255,0.02));font-weight:700;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media(max-width:700px){.projects{grid-template-columns:1fr}}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(6,182,212,0.06));border:1px solid rgba(255,255,255,0.02);display:flex;align-items:center;gap:12px}
+    .p-icon{width:56px;height:56px;border-radius:10px;display:grid;place-items:center;font-weight:900}
+
+    /* quick stats */
+    .stats{display:flex;gap:12px}
+    .stat{flex:1;padding:12px;border-radius:10px;text-align:center}
+    .stat strong{display:block;font-size:20px}
+
+    /* CTA */
+    .cta{display:flex;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;font-weight:800;text-decoration:none;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 10px 30px rgba(124,58,237,0.12);border:none;color:white}
+
+    /* micro interactions */
+    .hover-rise{transition:transform .18s,box-shadow .18s}
+    .hover-rise:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(2,6,23,0.6)}
+
+    /* footer */
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* neat code block for embed */
+    .meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+
+    /* animated gradient border */
+    .glow{position:relative}
+    .glow:before{content:"";position:absolute;inset:-2px;border-radius:14px;background:linear-gradient(90deg,var(--accent),var(--accent-2));filter:blur(16px);opacity:0.35;z-index:-1}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="grid">
+      <aside class="profile-card glow hover-rise">
+        <div class="avatar">
+          <img src="./azizbek.jpg" alt="Jo'shqinbek">
+        </div>
+        <div>
+          <div class="pill">Azizbek</div>
+          <h1 class="name"></h1>
+          <div class="subtitle">Front-end Dasturchi • Dizayn ixlosmandi</div>
+          <p class="tagline">Men zamonaviy, tez va estetik web yechimlarni yarataman. Kod — mening tilim, dizayn — menda ruh.</p>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <a class="btn primary" href="#contact">CV yuklab olish</a>
+          <a class="btn" href="#projects">Loyihalar</a>
+        </div>
+
+        <div style="margin-top:14px;display:grid;gap:8px">
+          <div style="font-weight:800;color:var(--muted)">Kontakt</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="section hover-rise">
+          <div class="meta">
+            <h2>Ma'lumot</h2>
+            <div class="muted">Yangilangan: 05 Dec, 2025</div>
+          </div>
+          <p class="muted">Salom! Men Madrimov Azizbek man - 14 yoshda man Xorazm Viloyati yangibozor tumanida tugilgan man  Web yaratish, interaktiv darslar va dizayn loyihalarida faolman. Quyida ko'nikmalar va so'nggi ishlarga qisqacha nazar.</p>
+        </section>
+
+        <section class="section hover-rise">
+          <h2>Ko'nikmalar</h2>
+          <div class="skills">
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">JavaScript (ES6+)</span>
+            <span class="skill">React</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Figma</span>
+            <span class="skill">Tailwind CSS</span>
+            <span class="skill">Git & GitHub</span>
+          </div>
+        </section>
+
+        <section id="projects" class="section hover-rise">
+          <h2>So'nggi loyihalar</h2>
+          <div class="projects">
+            <div class="project">
+              <div class="p-icon">01</div>
+              <div>
+                <div style="font-weight:800">Portfolio v2</div>
+                <div class="muted">Zamonaviy, animatsiyali </div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="p-icon">02</div>
+              <div>
+                <div style="font-weight:800">Interaktiv darslik</div>
+                <div class="muted">Bosqichma-bosqich JS darslari va misollar</div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="p-icon">03</div>
+              <div>
+                <div style="font-weight:800">Mini chatbot</div>
+                <div class="muted">Dialog tizimi va test sahifasi</div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="p-icon">04</div>
+              <div>
+                <div style="font-weight:800">Kurs platformasi</div>
+                <div class="muted">O'quv materiallari va testlar bilan LMS demo</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section hover-rise">
+          <h2>Statistika</h2>
+          <div class="stats">
+            <div class="stat"><strong>14</strong><div class="muted">Yosh</div></div>
+            <div class="stat"><strong>10</strong><div class="muted">Loyihalar</div></div>
+            <div class="stat"><strong>10</strong><div class="muted">Dars soatlari</div></div>
+          </div>
+        </section>
+
+        <section id="contact" class="section hover-rise">
+          <h2>Bog'lanish</h2>
+          <a href="https://t.me/madrimov71" target="_blank">Telegram</a>
+            <a href="https://instagram.com/javlonovic.77" target="_blank">Instagram</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="muted">© 2025 Azizbek Modern profil shabloni. O'zgartirishlar kerak bo'lsa, ayt.</div>
+    </footer>
+  </div>
+</body>
+</html>
